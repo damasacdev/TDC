@@ -1,0 +1,101 @@
+<div class="row">
+
+
+
+    <!--<div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list"></span> จัดการข้อมูล
+            </div>
+            <div class="panel-body">
+                <p>รายการ ข้อมูล</p>
+                <p>- ข้อมูล 1</p>
+                <p>- ข้อมูล 2</p>
+                <p>- ข้อมูล 3</p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list"></span> จัดการคิว
+            </div>
+            <div class="panel-body">
+                <p>รายการ ข้อมูลคิว</p>
+                <p>- ข้อมูล 1</p>
+                <p>- ข้อมูล 2</p>
+                <p>- ข้อมูล 3</p>
+            </div>
+        </div>
+    </div>-->
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list"></span> Monitor
+            </div>
+            <div class="panel-body">
+                <div class="row" style="text-align:center">
+                    <!-- <div class="col-md-offset-1 col-md-3">
+                        <label>CPU App</label>
+                        <mwl-gauge id="cpuApp" [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]=cpuApp|number [label]="percentagValue" [animated]="true" [animationDuration]="1">
+                        </mwl-gauge>
+                    </div>
+                    <div class="col-md-offset-2 col-md-3">
+                        <label>RAM App</label>
+                        <mwl-gauge [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]=ramApp|number [label]="percentagValue" [animated]="true" [animationDuration]="1">
+                        </mwl-gauge>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <div class="col-md-offset-1 col-md-3">
+                        <label>CPU Total</label>
+                        <mwl-gauge [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]=cpuTotal|number [label]="percentagValue" [animated]="true" [animationDuration]="1">
+                        </mwl-gauge>
+                    </div>
+                    <div class="col-md-offset-2 col-md-3">
+                        <label>RAM Total</label>
+                        <mwl-gauge id="ramTotal" [max]="100" [dialStartAngle]="180" [dialEndAngle]="0" [value]=ramTotal|number [label]="percentagValue" [animated]="true" [animationDuration]="1">
+                        </mwl-gauge>
+                    </div> -->
+                    <div class="col-sm-6">
+                        <label>CPU App <span id="cpuAppTxt"></span></label>
+                        <div class="progress">
+                            <div id="cpuApp" class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>RAM App <span id="ramAppTxt"></span></label>
+                        <div class="progress">
+                            <div id="ramApp" class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>CPU Total <span id="cpuTotalTxt"></span></label>
+                        <div class="progress">
+                            <div id="cpuTotal" class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label>RAM Total <span id="ramTotalTxt"></span></label>
+                        <div class="progress">
+                            <div id="ramTotal" class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> Log File </div>
+            <div class="panel-body">
+                <textarea [(ngModel)]="logTxt" class="col-md-12" rows="30" disabled></textarea>
+            </div>
+        </div>
+    </div>-->
+
+</div>

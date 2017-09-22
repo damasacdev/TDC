@@ -1,0 +1,84 @@
+.ng-link{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:link{
+   text-decoration: none; 
+}
+input[type="text"],input[type="password"]{
+    cursor: auto;
+}
+input[typd="select"]{
+    cursor:pointer;
+}
+textarea{
+   cursor: auto; 
+}
+.jumbotron{
+    background-color:#fff;
+}
+ 
+.btn-positive{
+    background:#3c8dbc;
+}
+.btn-positive:active {
+    background-color: #3c8dbc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c8dbc), color-stop(100%, #3c8dbc));
+    background-image: -webkit-linear-gradient(top, #3c8dbc 0%, #3c8dbc 100%);
+    background-image: linear-gradient(to bottom, #3c8dbc 0%, #3c8dbc 100%);
+}
+.modal-backdrop.in {
+            filter: alpha(opacity=50);
+            opacity: 4.5;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background:url('../../../bg.jpg');
+}
+ 
+
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 400px;
+        margin: 2px auto;
+    }
+}
+@media screen and (min-width: 768px){
+    .container .jumbotron, .container-fluid .jumbotron {
+        padding-right: 0px;
+        padding-left: 0px;
+        /* padding-bottom: 10px; */
+    }
+    .jumbotron {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.custom-modal-header[_ngcontent-c1] {
+    background-color: #3c8dbc;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    margin-top: -15px;
+    margin-bottom: 13px;
+}
+h1, .h1 {
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px)
+{
+    .container .jumbotron, .container-fluid .jumbotron {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: -5px;
+            /* padding-bottom: 10px; */
+        }
+}

@@ -1,0 +1,114 @@
+<div id="loading" class="col-md-12 text-center"><i class="fa fa-spinner fa-spin fa-fw"></i> กำลังเตรียมข้อมูล กรุณารอ....</div>
+<div class="row" id="Settings" style="display:none;">
+
+    <!--Start Setting Histype and DbType -->
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Setting</b></div>
+            <div class="panel-body">
+
+                <div id="histype">
+                    <label>HIS Type</label>
+                    <select id="histype" class="form-control" (click)="getSaveHisType($event.target.value)" (change)="getSaveHisType($event.target.value)">
+             <option value="">กรุณาเลือก Histype</option>
+             <option *ngFor="let h of hist" value="{{h.id}}">{{h.name}}</option>
+          </select>
+                </div>
+                <!--histype -->
+
+                <div id="DatabaseName">
+                    <label>DbType</label>
+                    <select id="dbtype" class="form-control" (click)="getConnectDataBaseForm($event.target.value)" (change)="getConnectDataBaseForm($event.target.value)">
+              <option value="">กรุณาเลือก ประเภท Database</option>
+             <option *ngFor="let d of dbtype; let i = index" value="{{i}}">{{d.name}}</option>
+          </select>
+                </div>
+                <!--DatabaseName -->
+
+            </div>
+        </div>
+    </div>
+    <!-- End Setting Histype and DbType -->
+
+    <!-- Start showConnectDatabase -->
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div id="showConnectDatabase">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Database Type</b> <strong id="dbName"></strong></div>
+                <div class="panel-body">
+                    <div id="showConnectDb">
+                        <div>
+                            <label>Host</label><input type="text" class="form-control" id="Host" value="127.0.0.1">
+                        </div>
+                        <div>
+                            <label>Username</label><input type="text" class="form-control" id="Username" value="root">
+                        </div>
+                        <div>
+                            <label>Password</label><input type="text" class="form-control" id="Password">
+                        </div>
+                        <div>
+                            <label>Port</label><input type="text" class="form-control" id="Port">
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <br>
+                        <div id="divConnect">
+                            <button id="btnConnect" class="btn btn-positive" (click)="ConnectDatabase()">
+                    <span id="icon-loading"></span>  Connect
+                </button>
+                        </div>
+                        <!--<div id="divDisConnect" style="display:none;">
+                  <button id="btnEnableForm" class="btn btn-danger" (click)="disConnect()">
+                    <span id="icon-loading"></span> DistConnect
+                  </button>  
+              </div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End showConnectDatabase -->
+
+    <!-- Start Database name -->
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div id="showConnectDatabase">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Configuration</b></div>
+                <div class="panel-body">
+                    <div id="showDatabase">
+                        <form id="DatabaseName">
+
+                            <label>Database</label>
+                            <select class="form-control" id="dbname" name="dbname" (change)="Savedb($event.target.value)">
+                                  <option value="">กรุณาเลือกฐานข้อมูล โรงพยาบาล</option>
+                                  <option *ngFor="let db of dbname" value="{{db.id}}">{{db.name}}</option> 
+                            </select>
+                            <div id="data-schema" style="display:none;">
+                                <label>Schema</label>
+                                <select class="form-control" id="schema" name="schema" (change)="SaveSchema($event.target.value)">
+                                  <option value="">กรุณาเลือก Schema</option>
+                                  <option *ngFor="let sc of schema" value="{{sc.id}}">{{sc.name}}</option> 
+                            </select>
+                            </div>
+
+                            <label>การเข้ารหัส</label>
+                            <input type="text" [(ngModel)]="encodes" name="encodes" id="encodes" class="form-control">
+                            <label><code> *รหัสต้องมี 6 หลักขึ้นไป</code></label>
+                        </form>
+                    </div>
+                    <div class="pull-right">
+                        <br>
+                        <div>
+                            <div id="divReset" class="col-sm-6"><button id="btnReset" class="btn btn-warning" (click)="getReset()">Reset</button></div>
+                            <div id="divStart" class="col-sm-6"><button id="btnStarts" class="btn btn-positive" (click)="getStart()">Start</button></div>
+                        </div>
+                        <div id="divStop" style="display:none;"><button class="btn btn-danger" (click)="getStop()">Stop</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Database name -->
+
+</div>

@@ -1,0 +1,82 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Config Time delay : Min:{{minValue}} Max:{{maxValue}} </h4>
+    </div>
+    <div class="panel-body">
+        <ng-template #loading>
+            <md-progress-bar color="primary" mode="indeterminate">
+            </md-progress-bar>
+        </ng-template>
+        <div *ngIf="preLoading;else loading;">
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Config delay : </b>
+            </div>
+            <div class="col-sm-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeCF($event)" value={{valueCF}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueCF}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Command delay : </b>
+            </div>
+            <div class="col-sm-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeCM($event)" value={{valueCM}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueCM}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Constants delay : </b>
+            </div>
+            <div class="col-md-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeCT($event)" value={{valueCT}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueCT}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Template delay : </b>
+            </div>
+            <div class="col-md-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeTP($event)" value={{valueTP}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueTP}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Sync delay : </b>
+            </div>
+            <div class="col-sm-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeSD($event)" value={{valueSD}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueSD}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Event delay : </b>
+            </div>
+            <div class="col-sm-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeEV($event)" value={{valueEV}} min={{minValue}} max={{maxValue}} step="1"></md-slider>
+                <span>{{valueEV}} Second</span>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-3" style="padding-top:15px">
+                <b>Sync Nrec : </b>
+            </div>
+            <div class="col-sm-9">
+                <md-slider id="min-value" disabled={{checkDisabled}} (input)="onValueChangeNR($event)" value={{valueNR}} min=500 max=3000 step="1"></md-slider>
+                <span>{{valueNR}} Record</span>
+            </div>
+        </div>
+
+        <div class="col-sm-8" id="groupBtn">
+            <div class="pull-right" style="padding-right:30px;">
+                <button class="btn btn-primary" (click)="onSaveDelay()" id="btnSave">Save</button>
+                <button class="btn btn-success" (click)="onQueryDelay()" id="btnReset">Reset</button>
+            </div>
+        </div>
+    </div>

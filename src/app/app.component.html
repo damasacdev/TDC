@@ -1,0 +1,115 @@
+<div class="window">
+    <header class="toolbar toolbar-header">
+        <h1 class="title"></h1>
+
+        <div class="toolbar-actions">
+            <div class="btn-group">
+                <button class="btn btn-default active">
+		        <span class="icon icon-home"></span>
+		      </button>
+                <button class="btn btn-default">
+		        <span class="icon icon-folder"></span>
+		      </button>
+                <button class="btn btn-default">
+		        <span class="icon icon-cloud"></span>
+		      </button>
+                <button class="btn btn-default">
+		        <span class="icon icon-popup"></span>
+		      </button>
+                <button class="btn btn-default">
+		        <span class="icon icon-shuffle"></span>
+		      </button>
+            </div>
+
+
+
+
+
+
+            <!--<a class="btn btn-default pull-right" routerLink="/testsql">
+               Checkupdate
+            </a>-->
+
+        </div>
+    </header>
+    <div class="window-content">
+        <div class="pane-group">
+            <div class="pane-sm sidebar">
+                <nav class="nav-group">
+                    <a routerLink="/home" class="ng-link">
+                        <span class="nav-group-item">
+														<span class="icon icon-home"></span> Home
+                        </span>
+                    </a>
+                    <a routerLink="/setting">
+                        <span class="nav-group-item">
+														<i class="fa fa-cog" aria-hidden="true"></i>
+														Settings
+												</span>
+                    </a>
+                    <!--<a routerLink="/tools">
+                        <span class="nav-group-item">
+														<i class="fa fa-sliders" aria-hidden="true"></i>
+														Tools
+												</span>
+                    </a>-->
+
+                    <a routerLink="/logout">
+                        <span class="nav-group-item">
+														<i class="fa fa-sign-out" aria-hidden="true"></i>
+														Logout
+												</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- pane-sm sidebar -->
+            <div class="pane">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <alert type="info" id="qJob">
+                            <strong>Process Queue :</strong> <span id="process-queue"></span>
+                            <!--{{qJob}}-->
+                        </alert>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div><b>ยินดีต้อนรับ</b></div>
+                                <div style="    position: relative; float: right; margin-top: -20px;">
+                                    <span id="statusColor" class="icon icon-record" style="color:#040404"></span><span id="Online"> {{statusPing}}</span>
+
+                                </div>
+                            </div>
+                            <div class="panel-body">
+
+                                <p><b><i class="fa fa-user"></i> ชื่อ-นามสกุล: </b> <span id="name"></span>
+                                    <label id="statusJob" class="pull-right">Status : {{statusJob}}</label>
+                                </p>
+                                <div class="col-sm-6">
+                                    <strong id="sitecode"></strong>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="groupBtnApp">
+                                        <button id="btnStopJob" (click)="stopJob()" class="btn btn-danger pull-right glyphicon glyphicon-stop" disabled> Stop</button>
+                                        <button id="btnPauseJob" (click)="pauseJob()" class="btn btn-primary pull-right glyphicon glyphicon-pause" disabled> Pause</button>
+                                        <button id="btnStartJob" (click)="startJob()" class="btn btn-success pull-right glyphicon glyphicon-play"> Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+
+                <router-outlet></router-outlet>
+                <!-- content dynamic -->
+            </div>
+            <!-- pane -->
+        </div>
+    </div>
+    <footer class="toolbar toolbar-footer text-center" style="padding:5px;">
+        TDC Version 2.0.1
+    </footer>
+    <!-- footer -->
+
+</div>

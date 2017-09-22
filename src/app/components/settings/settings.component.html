@@ -1,0 +1,83 @@
+<div id="loading" class="col-md-12 text-center"><i class="fa fa-spinner fa-spin fa-fw"></i> กำลังเตรียมข้อมูล กรุณารอ....</div>
+<div id="Settings" style="display:none;">
+<div class="row">
+     
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div class="panel panel-default">
+            <div class="panel-heading"><b>Setting</b></div>
+            <div class="panel-body">
+                <div>
+                    <label>HIS Type</label>
+                    <div id="showHis">
+                       <select id="histype" class="form-control">
+                           <option value="">กรุณาเลือก Histype</option>
+                           <option *ngFor="let h of hist" value="{{h.id}}">{{h.name}}</option>
+                       </select>
+                    </div>
+                    <hr>
+                    <label>DbType</label>
+                    <div id="showDbtype">
+                        <select id="dbtype" class="form-control" (change)="dbConnectConfig($event.target.value)">
+                           <option *ngFor="let d of dbtype; let i = index" value="{{i}}">{{d}}</option>
+                       </select>
+                    </div>
+                </div>
+                <!-- col-md-4 -->
+            </div>
+        </div>
+    </div>
+    <!-- col-md-4 -->
+
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div id="showConnectDatabase">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Database Type</b> <strong id="dbName"></strong></div>
+                <div class="panel-body">
+                    <div id="showConnectDb"></div>
+                    <div class="pull-right">
+                        <br>
+                        <button id="btnConnect" class="btn btn-positive" (click)="dbConnection()">
+                            
+                            <span id="icon-loading"></span>
+                            Connect</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- col-md-4 -->
+
+    <div class="col-md-4 col-sm-4 col-lg-4">
+        <div id="showConnectDatabase">
+            <div class="panel panel-default">
+                <div class="panel-heading"><b>Configuration</b></div>
+                <div class="panel-body">
+                    <div id="showDatabase">
+                        <form id="DatabaseName">
+                            <label>Database</label>
+                            <select class="form-control" id="dbname" name="dbname">
+                                  <option value="">กรุณาเลือกฐานข้อมูล โรงพยาบาล</option>
+                                  <option *ngFor="let db of dbname" value="{{db.id}}">{{db.name}}</option> 
+                              </select>
+                            <label>การเข้ารหัส</label>
+                            <input type="text" name="encodes" id="encodes" class="form-control">
+                            <label><code> *รหัสต้องมี 6 หลักขึ้นไป</code></label>
+                        </form>
+                    </div>
+                    <div class="pull-right">
+                        <br>
+                         
+                        <div id="divStart" style="display:none;"><button class="btn btn-positive" (click)="Start()">Start</button></div>
+                        <div id="divStop" style="display:none;"><button class="btn btn-dangere" (click)="Stop()">Stop</button></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- col-md-4 -->
+
+
+
+</div>
+
+</div>

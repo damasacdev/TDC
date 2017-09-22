@@ -1,0 +1,7 @@
+.text {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    // padding: 5px;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,29 @@
+<div class="container-fluid custom-modal-container" >
+    <div class="row custom-modal-header">
+        <div class="col-sm-12">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-xs-12">
+            <div class="jumbotron">
+                <form id="frmLogin">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input value='test1234' type="text" class="form-control" placeholder="Username" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input value='test1234' type="password" class="form-control" placeholder="Password" id="password" name="password">
+                    </div>
+                    <div>
+                        <button class="btn btn-positive btn-lg btn-block" (click)="Login()">
+                            <i id="iconLogin"></i>
+                            Login
+                            </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

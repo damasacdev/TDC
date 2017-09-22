@@ -1,0 +1,16 @@
+.text {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.panel-event{
+     overflow:hidden;
+}
+.btn-right{
+    position: relative; 
+    float: right; 
+    margin-right: 3px;
+}
+

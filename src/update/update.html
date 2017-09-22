@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TDC Update</title>
+    <meta charset="utf-8">
+    <script>
+        window.$ = window.jQuery = require('../assets/jquery/dist/jquery.min.js');
+    </script>
+
+    <script src="../assets//bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <br> กำลังดาวน์โหลด...
+        <div class="progress">
+            <div id="progressDownload" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+            </div>
+        </div>
+        <span id="dowload">
+            ความเร็วในการดาวน์โหลด : 0.0 Mb/s <br>
+            ดาวน์โหลดแล้ว : 0 % (0 Mb / 0 Mb)
+        </span>
+    </div>
+
+    <script>
+        const ipc = require('electron').ipcRenderer;
+
+        ipc.on('download', function(event, progressObj) {
+            let bytesPerSecond = progressObj.bytesPerSecond / 1024 / 1024;
+            let transferred = progressObj.transferred / 1024 / 1024;
+            let total = progressObj.total / 1024 / 1024;
+            var p = progressObj.percent;
+            let log_message = "ความเร็วในการดาวน์โหลด : " + bytesPerSecond.toFixed(2) + " Mb/s <br>";
+            log_message = log_message + ' ดาวน์โหลดแล้ว : ' + p.toFixed(0) + ' % ';
+            log_message = log_message + ' ( ' + transferred.toLocaleString() + " Mb /" + total.toLocaleString() + ' Mb )';
+            $('#dowload').html(log_message);
+            $("#progressDownload").css("width", p.toFixed(2) + "%");
+        });
+    </script>
+
+</body>
+
+</html>

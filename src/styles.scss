@@ -1,0 +1,44 @@
+
+@import '/assets/theme.scss';
+
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+// @import '~@angular/material/prebuilt-themes/purple-green.css';
+mwl-gauge {
+  width: 250px;
+  height: 250px;
+  display: block;
+  padding: 10px;
+}
+mwl-gauge > .gauge > .dial {
+  stroke:#CEECF5;
+  stroke-width: 100;
+  fill: rgba(0,0,0,0);
+}
+mwl-gauge > .gauge > .value {
+  stroke:#0080FF;
+  stroke-width: 120;
+  fill: rgba(0,0,0,0);
+}
+mwl-gauge > .gauge > .value-text {
+  fill: #0080FF;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10em;
+}
+
+md-slider {
+  width: 350px;
+}
+.red-slider .md-thumb:after, .red-slider .md-track{
+    background-color: greenyellow !important;
+    border-color: greenyellow !important;
+}
+.red-slider .md-focus-thumb, .red-slider .md-focus-ring{
+    background-color: greenyellow;
+}
+/*---HOME PAGE---*/
+.panel-body.panel-table{
+    margin: -15px;     
+}

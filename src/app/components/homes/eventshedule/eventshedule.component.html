@@ -1,0 +1,117 @@
+<meta charset="utf-8">
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><i class="fa fa-list" aria-hidden="true"></i> จำนวนคิวที่เหลือ อัพเดทล่าสุด
+                <font color='red' id="updateTime"></font> <button id="btnRefreshQ" style="display:none" class="btn btn-primary" (click)="refreshQ()"><i id="spiner" class="fa fa-refresh"></i></button>
+                <!-- <font color='red'>{{updateTime}}</font> -->
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal text-center" id="dataQ">
+                    <i class="fa fa-spinner fa-spin" style="font-size:25px"></i> <br>กำลังเตรียมข้อมูล...
+                    <!-- <div id="dataQ"></div> -->
+                    <!-- <dt>จำนวนคิวทั้งหมด :</dt>
+                    <dd><code> {{countAll}} </code> คิว</dd>
+                    <dt>f_person :</dt>
+                    <dd><code> {{f_person}} </code> คิว</dd>
+                    <dt>f_person_tmp :</dt>
+                    <dd><code> {{f_person_tmp}} </code> คิว</dd>
+                    <dt>f_address :</dt>
+                    <dd><code> {{f_address}} </code> คิว</dd>
+                    <dt>f_death :</dt>
+                    <dd><code> {{f_death}} </code> คิว</dd>
+                    <dt>diagnosis_opd :</dt>
+                    <dd><code> {{diagnosis_opd}} </code> คิว</dd>
+                    <dt>diagnosis_ipd :</dt>
+                    <dd><code> {{diagnosis_ipd}} </code> คิว</dd>
+                    <dt>labfu :</dt>
+                    <dd><code> {{labfu}} </code> คิว</dd>
+                    <dt>drug_opd :</dt>
+                    <dd><code> {{drug_opd}} </code> คิว</dd>
+                    <dt>drug_ipd :</dt>
+                    <dd><code> {{drug_ipd}} </code> คิว</dd>
+                    <dt>f_chronic :</dt>
+                    <dd><code> {{f_chronic}} </code> คิว</dd>
+                    <dt>f_service :</dt>
+                    <dd><code> {{f_service}} </code> คิว</dd> -->
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!--<div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-event">
+                <span class="icon icon-cog"></span> Event
+                <button class="btn btn-default btn-right " id="btn-pauge"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</button>
+                <button class="btn btn-danger btn-right" id="btn-pauge">Purge</button>
+            </div>
+            <div class="panel-body panel-table">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Cname</th>
+                                <th>PreSql</th>
+                                <th>sql</th>
+                                <th>clienterr</th>
+                                <th>severr</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let event of Eventdata; let i=index">
+                                <td>{{ i+1 }}</td>
+                                <td>{{ event.dupdate | date: 'dd / MM / yyyy' }}</td>
+                                <td>{{ event.Cname }}</td>
+                                <td class="text">{{ event.presql }}</td>
+                                <td class="text">{{ event.sql }}</td>
+                                <td>
+                                    <div *ngIf="event.status == '9' && event.clienterr != '' ; else clienterr">
+                                        <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+                                    </div>
+                                    <template #clienterr>
+                    <!--<div *ngIf="event.status == '1' ; else subclienterr">
+                      <i class="fa fa-check text-success" aria-hidden="true"></i>
+                    </div>
+                    <template #subclienterr>
+                      <i class="fa fa-cog fa-spin fa-fw text-warning" aria-hidden="true"></i>
+                      </template>-->
+    <!--</template>
+    </td>
+
+    <td>
+        <div *ngIf="event.status == '9' && event.serverr != '' ; else serverr">
+            <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+        </div>
+        <template #serverr>-->
+    <!--<div *ngIf="event.status == '1' ; else subserverr">
+                      <i class="fa fa-check text-success" aria-hidden="true"></i>
+                    </div>
+                    <template #subserverr>
+                      <i class="fa fa-cog fa-spin fa-fw text-warning" aria-hidden="true"></i>
+                      </template>-->
+    <!--</template>
+                                </td>
+                                <td>
+                                    <div *ngIf="event.status == '9' ; else status">
+                                        <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i>
+                                    </div>
+                                    <template #status>
+                    <div *ngIf="event.status == '1' ; else substatus">
+                      <i class="fa fa-check text-success" aria-hidden="true"></i>
+                    </div>
+                    <template #substatus><i class="fa fa-spinner fa-spin fa-fw text-warning" aria-hidden="true"></i></template>
+                                    </template>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+<!--Close-row-->

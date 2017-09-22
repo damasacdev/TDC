@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TDC</title>
+    <link rel="stylesheet" href="./assets/photon/css/photon.css">
+    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+
+
+    <base href="./">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <app-root>
+        <div style="position: fixed; top: 30%;left: 45%;">
+            <i class="fa fa-spinner fa-spin" style="font-size:100px;color:#2E9AFE"></i>
+        </div>
+    </app-root>
+    <script>
+        var auto = require('./lib/autoUpdate.js');
+        try {
+            auto.CheckVersion();
+        } catch (error) {
+            console.log(error);
+        }
+    </script>
+</body>
+
+</html>
