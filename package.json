@@ -81,7 +81,7 @@
         "hammerjs": "^2.0.8",
         "handsontable": "^0.32.0",
         "is-online": "^7.0.0",
-        "jquery": "^3.2.1",
+        "jquery": "^3.5.0",
         "mkdirp": "^0.5.1",
         "mongojs": "^2.4.0",
         "mssql": "^4.0.4",
